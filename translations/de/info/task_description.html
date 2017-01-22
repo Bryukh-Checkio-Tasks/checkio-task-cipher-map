@@ -1,0 +1,161 @@
+<img class="for_info_only half" style="float: left" src="{{ MEDIA }}cipher_map_illustration.png">
+
+<div class="story">
+    <p>
+        »Nikola, A1213pokl, bAse730onE.«
+    </p>
+
+    <p>
+        »Ja Sofia, was ist los?«
+    </p>
+
+    <p>
+        »Sag Du es mir! Dein Foltergerät, mit seinem neuen Lexikon, lässt meine
+        Schaltkreise qualmen. Ich kann mir diese komplizierten neuen Passwörter einfach
+        nicht merken und das Ding will und will keine einfacheren akzeptieren.«
+    </p>
+
+    <p>
+        »Oh, aber das sind gute Passwörter, und natürlich kannst Du sie verwenden.«
+    </p>
+
+    <p>
+        »Warum kannst Du sie nicht benutzen!?«, fragte Sofia beinahe hysterisch.<br>
+        »Ich habe sie schon vergessen! Willst Du, dass ich für alle Ewigkeit aus meinem
+        eigenen Haus ausgeschlossen bin? Lass Dir gefälligst was Einfacheres einfallen,
+        sodass ich mir nicht diesen zufälligen Kauderwelsch merken muss.«<br>
+        Für gewöhnlich reagiert Sofia nur selten so aggressiv, aber das Maß war endgültig
+        voll. Der Stress der letzten Tage in Verbindung mit ihrer Erschöpfung hatte sie an
+        den Rand des Erträglichen gebracht.
+    </p>
+
+    <p>
+        »Keine Bange, ich hatte bereits erwartet, dass ihr eine einfachere Methode wollt.
+        Nimm doch einfach das Chiffriergitter zur Hilfe.
+        Damit können wir alle Passwörter verschlüsseln und sie direkt neben der Tür oder
+        an einem besonderen Ort, auf den wir uns alle einigen, aufbewahren.
+        Man kann die Passwörter nur mit dem Gitter lesen, und das nehmen wir immer mit,
+        wenn wir unterwegs sind.«
+    </p>
+
+    <p>
+        »Also muss ich mich nicht an all diese Passwörter erinnern?
+        Wir müssen nur dafür sorgen, dass wir das Chiffriergitter nicht verlieren.«, fragte
+        Sofia hoffnungsvoll.
+    </p>
+
+    <p>
+        »Ja, genau so ist es.«
+    </p>
+
+    <p>
+        »Genial! Zeig mir das Gitter und erklär mir, wie genau das noch ein Mal
+        funktioniert.«
+    </p>
+</div>
+
+<p>
+    Hilf Sofia, ein Entschlüsselungsprogramm für die Passwörter zu schreiben, die Nikola
+    mit dem Chiffriergitter verschlüsseln wird.
+    Ein Chiffriergitter ist ein Stück Papier, eingeteilt in 4&nbsp;×&nbsp;4 Quadrate mit
+    vier ausgeschnittenen Fenstern.
+    Wenn er das Gitter auf ein gleiches Blatt legt, schreibt der Encoder die
+    ersten vier Zeichen seines Passworts in diese Fenster (siehe Abb. Unten).
+    Anschließend dreht er das Gitter um 90 Grad im Uhrzeigersinn.
+    Die Symbole, die vorher geschrieben wurden, werden unter dem Gitter versteckt und
+    blankes Papier erscheint innerhalb der Fenster.
+    Der Encoder schreibt dann die nächsten vier Symbole des Passworts in die Fenster,
+    dreht das Gitter wieder um 90 Grad und schreibt die nächsten vier Symbole in die
+    leeren Fenster, bevor er das Gitter noch einmal dreht.
+    Schließlich trägt er die letzten vier Symbole des Passworts ein.<br>
+    Ohne dasselbe Chiffriergitter, ist es schwierig, das Kennwort aus dem resultierenden
+    Quadrat zu lesen, das aus 16 Symbolen besteht.
+    Somit kann der Codierer sicher sein, dass kein Radaubruder leichten Zugang zu der
+    verschlossenen Tür erhält.
+</p>
+
+<p class="for_info_only" style="text-align: center;">
+    <img src="{{ MEDIA }}cipher_map.png" style="max-height: 350px" />
+</p>
+
+
+<p>
+    Schreib ein Modul, das es den Robotern ermöglicht, ihre Passwörter bei ihrer Rückkehr
+    leicht abzurufen.
+</p>
+
+<p>
+    Das Chiffriergitter und das chiffrierte Passwort werden als Array (Tupel) von Strings
+    dargestellt.
+</p>
+
+<p>
+    <strong>Eingabe:</strong> Ein Chiffriergitter und ein chiffriertes Passwort als Tupel
+    von Strings.
+</p>
+
+<p>
+    <strong>Ausgabe:</strong> Das Passwort als String.
+</p>
+
+<div class="for_info_only">
+    <p><strong>Beispiele:</strong></p>
+<pre class="brush: python">{% if interpreter.slug == "js-node" %}
+recallPassword(
+    ['X...',
+     '..X.',
+     'X..X',
+     '....'],
+    ['itdf',
+     'gdce',
+     'aton',
+     'qrdi']) == 'icantforgetiddqd'
+
+recallPassword(
+    ['....',
+     'X..X',
+     '.X..',
+     '...X'],
+    ['xhwc',
+     'rsqx',
+     'xqzz',
+     'fyzr']) == 'rxqrwsfzxqxzhczy'
+{% else %}
+recall_password(
+    ('X...',
+     '..X.',
+     'X..X',
+     '....'),
+    ('itdf',
+     'gdce',
+     'aton',
+     'qrdi')) == 'icantforgetiddqd'
+
+recall_password(
+    ('....',
+     'X..X',
+     '.X..',
+     '...X'),
+    ('xhwc',
+     'rsqx',
+     'xqzz',
+     'fyzr')) == 'rxqrwsfzxqxzhczy'
+{% endif %}</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wozu das gut ist:</strong><br>
+    Hier erfährst Du, wie man mit 2-D-Arrays arbeiten kann.<br>
+    Außerdem lernst Du etwas über die Fleißnersche Schablone, ein Verschlüsselungsverfahren
+    aus dem späten 19'ten Jahrhundert, das auf dem viel älteren Cardan-Gitter aufbaut.
+</p>
+
+<p>
+    <strong>Bedingungen:</strong><br>
+    len(cipher_grille) == 4<br>
+    len(ciphered_password) == 4<br>
+    all(len(row) == 4 for row in ciphered_password)<br>
+    all(len(row) == 4 for row in cipher_grille)<br>
+    all(all(ch in string.ascii_lowercase for ch in row) for row in ciphered_password)<br>
+    all(all(ch == "X" or ch == "." for ch in row) for row in cipher_grille)<br>
+</p>
