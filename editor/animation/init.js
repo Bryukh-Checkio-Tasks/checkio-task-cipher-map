@@ -81,7 +81,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
             animationTemplateName: 'animation',
             functions: {
                 js: 'recallPassword',
-                python: 'checkio'
+                python: 'recall_password'
             },
             animation: function($explanation, data){
                 var checkioInput = data.in;

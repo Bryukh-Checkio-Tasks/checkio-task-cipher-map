@@ -63,47 +63,19 @@
 
 <div class="for_info_only">
     <p><strong>Example:</strong></p>
-<pre class="brush: python">{% if interpreter.slug == "js-node" %}
-recallPassword(
-    ['X...',
-     '..X.',
-     'X..X',
-     '....'],
-    ['itdf',
-     'gdce',
-     'aton',
-     'qrdi']) == 'icantforgetiddqd'
-
-recallPassword(
-    ['....',
-     'X..X',
-     '.X..',
-     '...X'],
-    ['xhwc',
-     'rsqx',
-     'xqzz',
-     'fyzr']) == 'rxqrwsfzxqxzhczy'
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">recallPassword(['X...', '..X.', 'X..X', '....'],
+ ['itdf', 'gdce', 'aton', 'qrdi']) == 'icantforgetiddqd'
+recallPassword(['....', 'X..X', '.X..', '...X'],
+ ['xhwc', 'rsqx', 'xqzz', 'fyzr']) == 'rxqrwsfzxqxzhczy'
+</pre>
 {% else %}
-recall_password(
-    ('X...',
-     '..X.',
-     'X..X',
-     '....'),
-    ('itdf',
-     'gdce',
-     'aton',
-     'qrdi')) == 'icantforgetiddqd'
-
-recall_password(
-    ('....',
-     'X..X',
-     '.X..',
-     '...X'),
-    ('xhwc',
-     'rsqx',
-     'xqzz',
-     'fyzr')) == 'rxqrwsfzxqxzhczy'
-{% endif %}</pre>
+<pre class="brush: python">recall_password(['X...', '..X.', 'X..X', '....'],
+ ['itdf', 'gdce', 'aton', 'qrdi']) == 'icantforgetiddqd'
+recall_password(['....', 'X..X', '.X..', '...X'],
+ ['xhwc', 'rsqx', 'xqzz', 'fyzr']) == 'rxqrwsfzxqxzhczy'
+</pre>
+{% endif %}
 </div>
 
 <p class="for_info_only">
